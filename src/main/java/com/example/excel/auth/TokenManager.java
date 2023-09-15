@@ -1,4 +1,4 @@
-package com.example.demo.auth;
+package com.example.excel.auth;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.security.UserDetailsImpl;
+import com.example.excel.security.UserDetailsImpl;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

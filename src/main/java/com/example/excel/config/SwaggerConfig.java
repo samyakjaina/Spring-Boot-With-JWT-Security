@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.excel.config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +33,7 @@ public class SwaggerConfig {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).securityContexts(Arrays.asList(securityContext()))
 				.securitySchemes(Arrays.asList(apiKey(), institutionKey())).select().paths(PathSelectors.any())
-				.apis(RequestHandlerSelectors.basePackage("com.example.demo.controller")).build();
+				.apis(RequestHandlerSelectors.basePackage("com.example.excel.controller")).build();
 	}
 
 	@Bean

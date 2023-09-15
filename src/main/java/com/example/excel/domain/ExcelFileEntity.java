@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.excel.domain;
 
 import java.time.LocalDateTime;
 import java.util.List;

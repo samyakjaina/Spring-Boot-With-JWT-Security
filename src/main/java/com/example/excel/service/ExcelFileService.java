@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.excel.service;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.demo.domain.ExcelFileEntity;
-import com.example.demo.exceptions.CustomException;
+import com.example.excel.domain.ExcelFileEntity;
+import com.example.excel.exceptions.CustomException;
 
 /**
  * @author BT

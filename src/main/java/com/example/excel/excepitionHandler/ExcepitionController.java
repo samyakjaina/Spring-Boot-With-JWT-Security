@@ -1,4 +1,4 @@
-package com.example.demo.excepitionHandler;
+package com.example.excel.excepitionHandler;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.example.demo.exceptions.CustomException;
+import com.example.excel.exceptions.CustomException;
 
 /**
  * @author BT

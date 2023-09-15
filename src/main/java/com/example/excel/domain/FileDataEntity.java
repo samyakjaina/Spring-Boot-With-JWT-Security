@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.excel.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,13 +1,13 @@
-package com.example.demo.security;
+package com.example.excel.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.demo.domain.User;
+import com.example.excel.domain.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.repository.UserRepository;
+import com.example.excel.repository.UserRepository;
 
 /**
  * @author BT
