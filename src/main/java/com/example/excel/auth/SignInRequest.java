@@ -3,18 +3,18 @@ package com.example.excel.auth;
 import java.io.Serializable;
 
 /**
- * @author BT
+ * @author MEHUL TRIVEDI
  *
  */
-public class LoginRequest implements Serializable {
+public class SignInRequest implements Serializable {
 	private static final long serialVersionUID = 2636936156391265891L;
 	private String username;
 	private String password;
 
-	public LoginRequest() {
+	public SignInRequest() {
 	}
 
-	public LoginRequest(String username, String password) {
+	public SignInRequest(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;

@@ -12,11 +12,13 @@ import com.example.excel.domain.ExcelFileEntity;
 import com.example.excel.exceptions.CustomException;
 
 /**
- * @author BT
+ * Service Interface for Excel file
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @Service
-public interface ExcelFileService {
+public interface FileService {
 	/**
 	 * It will delete the Excel File by Id
 	 * 
@@ -51,7 +53,7 @@ public interface ExcelFileService {
 	 * @return
 	 * @throws IOException
 	 */
-	String uploadFile(MultipartFile file, HttpServletRequest request) throws IOException;
+	Long uploadFile(MultipartFile file, HttpServletRequest request) throws IOException;
 
 	/**
 	 * It will fetch the Current status of Excel File by id

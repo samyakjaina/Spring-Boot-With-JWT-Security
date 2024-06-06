@@ -18,7 +18,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 /**
- * @author BT
+ * Entity Class for user
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @Entity

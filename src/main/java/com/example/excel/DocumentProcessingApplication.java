@@ -4,14 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author BT
+ * @author MEHUL TRIVEDI
  *
  */
 @SpringBootApplication
-public class ExcelUploaderApplication {
+public class DocumentProcessingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExcelUploaderApplication.class, args);
+		SpringApplication.run(DocumentProcessingApplication.class, args);
 	}
 
 }

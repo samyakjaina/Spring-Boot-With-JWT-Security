@@ -7,7 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * @author BT
+ * Entity Class for excel file data
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @Entity

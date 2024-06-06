@@ -11,11 +11,13 @@ import org.springframework.stereotype.Repository;
 import com.example.excel.domain.ExcelFileEntity;
 
 /**
- * @author BT
+ * Repository for Excel Entity
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @Repository
-public interface ExcelFileRepository extends JpaRepository<ExcelFileEntity, Long> {
+public interface FileRepository extends JpaRepository<ExcelFileEntity, Long> {
 	/**
 	 * @return
 	 */
@@ -35,4 +37,10 @@ public interface ExcelFileRepository extends JpaRepository<ExcelFileEntity, Long
 	 */
 	@Query("select e.status from ExcelFileEntity e where e.isDeleted = false and e.id = :id")
 	String findStausByIdAndDeletedFalse(@Param("id") Long id);
+
+	/**
+	 * @return
+	 */
+	@Query("from ExcelFileEntity e where e.isDeleted = false and e.status = :status")
+	List<ExcelFileEntity> findByDeletedFalseAndStatusSaved(@Param("status") String status);
 }

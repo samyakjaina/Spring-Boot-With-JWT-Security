@@ -8,7 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.example.excel.domain.User;
 
 /**
- * @author BT
+ * Repository for User Entity
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @Repository

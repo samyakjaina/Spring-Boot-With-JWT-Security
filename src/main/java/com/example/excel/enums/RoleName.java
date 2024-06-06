@@ -1,9 +1,11 @@
 package com.example.excel.enums;
 
 /**
- * @author BT
+ * Enum for Role Management
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
-public enum ERole {
-	ROLE_USER, ROLE_ADMIN
+public enum RoleName {
+	USER, ADMIN
 }

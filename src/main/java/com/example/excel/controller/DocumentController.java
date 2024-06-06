@@ -17,77 +17,83 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.example.excel.domain.ExcelFileEntity;
 import com.example.excel.exceptions.CustomException;
-import com.example.excel.service.impl.ExcelFileServiceImpl;
+import com.example.excel.service.FileService;
 
 /**
- * @author BT
+ * Controller class for Files
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @RestController
-@RequestMapping("/file")
-public class FilesController {
+@RequestMapping("/document")
+public class DocumentController {
 
 	@Autowired
-	ExcelFileServiceImpl excelFileServiceImpl;
+	FileService fileService;
 
-	
 	/**
-	 * It will fetch all the Excel File Record
+	 * Method to fetch all the document
+	 * 
 	 * @return
 	 */
-	@GetMapping("/getAllRecords")
-	@PreAuthorize("hasRole('ROLE_USER')  or hasRole('ROLE_ADMIN') ")
+	@GetMapping("/get/all")
+	@PreAuthorize("hasAuthority('USER')  or hasAuthority('ADMIN') ")
 	public List<ExcelFileEntity> getAllRecords() {
-		return excelFileServiceImpl.getAllRecords();
+		return fileService.getAllRecords();
 	}
 
 	/**
-	 * It will delete the Excel File by Id
+	 * Method to delete the document by Id
+	 * 
 	 * @param id
 	 * @return
 	 * @throws CustomException
 	 */
-	@DeleteMapping("/deleteById/{id}")
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@DeleteMapping("/delete-by-id/{id}")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	public String deleteById(@PathVariable Long id) throws CustomException {
-		return excelFileServiceImpl.deleteById(id);
+		return fileService.deleteById(id);
 	}
 
 	/**
-	 * It will find the Excel File by Id
+	 * Method to find the Excel File by Id
+	 * 
 	 * @param id
 	 * @param request
 	 * @return
 	 * @throws CustomException
 	 */
-	@GetMapping("/findById/{id}")
-	@PreAuthorize("hasRole('ROLE_USER')  or hasRole('ROLE_ADMIN') ")
+	@GetMapping("/find-by-id/{id}")
+	@PreAuthorize("hasAuthority('USER')  or hasAuthority('ADMIN') ")
 	public ExcelFileEntity findById(@PathVariable Long id, HttpServletRequest request) throws CustomException {
-		return excelFileServiceImpl.findById(id, request);
+		return fileService.findById(id, request);
 	}
 
 	/**
-	 * It will upload the Excel File
+	 * Method to upload the Excel File
+	 * 
 	 * @param file
 	 * @param request
 	 * @return
 	 * @throws Exception
 	 */
 	@PostMapping("/upload")
-	@PreAuthorize("hasRole('ROLE_ADMIN') ")
-	public String upload(@RequestParam MultipartFile file, HttpServletRequest request) throws Exception {
-		return excelFileServiceImpl.uploadFile(file, request);
+	@PreAuthorize("hasAuthority('ADMIN') ")
+	public Long upload(@RequestParam MultipartFile file, HttpServletRequest request) throws Exception {
+		return fileService.uploadFile(file, request);
 	}
 
 	/**
-	 * It will fetch the Current status of Excel File by id
+	 * Method to fetch the Current status of Excel File by id
+	 * 
 	 * @param id
 	 * @return
 	 * @throws CustomException
 	 */
-	@GetMapping("/findByIdStatus/{id}")
-	@PreAuthorize("hasRole('ROLE_ADMIN') ")
+	@GetMapping("/find-by-id-status/{id}")
+	@PreAuthorize("hasAuthority('ADMIN') ")
 	public String findByIdStatus(@PathVariable Long id) throws CustomException {
-		return excelFileServiceImpl.findByIdStatus(id);
+		return fileService.findByIdStatus(id);
 	}
 }

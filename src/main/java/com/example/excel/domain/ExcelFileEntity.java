@@ -16,7 +16,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- * @author BT
+ * Entity Class for excel 
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @Entity

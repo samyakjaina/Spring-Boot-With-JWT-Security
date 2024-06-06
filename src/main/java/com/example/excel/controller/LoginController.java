@@ -1,38 +1,28 @@
 package com.example.excel.controller;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.excel.auth.JwtResponse;
-import com.example.excel.auth.LoginRequest;
-import com.example.excel.auth.TokenManager;
-import com.example.excel.security.UserDetailsImpl;
+import com.example.excel.auth.SignInRequest;
+import com.example.excel.service.LoginService;
 
 /**
- * @author BT
+ * Controller class for Login
+ * 
+ * @author MEHUL TRIVEDI
  *
  */
 @RestController
 @RequestMapping("/login")
 public class LoginController {
 	@Autowired
-	AuthenticationManager authenticationManager;
-
-	@Autowired
-	TokenManager jwtUtils;
+	LoginService loginService;
 
 	/**
 	 * This api is used for sign into the system
@@ -41,20 +31,8 @@ public class LoginController {
 	 * @return
 	 */
 	@PostMapping("/signin")
-	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-
-		Authentication authentication = authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
-
-		SecurityContextHolder.getContext().setAuthentication(authentication);
-		String jwt = jwtUtils.generateJwtToken(authentication);
-
-		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-		List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
-				.collect(Collectors.toList());
-
-		return ResponseEntity.ok(
-				new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), userDetails.getEmail(), roles));
+	public ResponseEntity<?> signIn(@Valid @RequestBody SignInRequest signInRequest) {
+		return loginService.signIn(signInRequest);
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.example.excel.auth;
 
 import java.io.Serializable;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 /**
- * @author BT
+ * @author MEHUL TRIVEDI
  *
  */
 @Component
