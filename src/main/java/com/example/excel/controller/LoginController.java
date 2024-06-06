@@ -15,7 +15,7 @@ import com.example.excel.service.LoginService;
 /**
  * Controller class for Login
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @RestController

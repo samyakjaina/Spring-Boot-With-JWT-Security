@@ -10,7 +10,7 @@ import com.example.excel.domain.User;
 /**
  * Repository for User Entity
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Repository

@@ -18,7 +18,7 @@ import javax.persistence.Table;
 /**
  * Entity Class for excel 
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Entity

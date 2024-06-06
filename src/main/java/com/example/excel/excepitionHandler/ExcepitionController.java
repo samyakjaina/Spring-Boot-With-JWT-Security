@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.example.excel.exceptions.CustomException;
 
 /**
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @RestControllerAdvice

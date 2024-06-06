@@ -24,7 +24,7 @@ import com.example.excel.service.LoginService;
 /**
  * Service Implementaion Class for Login
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Component

@@ -14,7 +14,7 @@ import com.example.excel.enums.RoleName;
 /**
  * Entity Class for role management
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Entity

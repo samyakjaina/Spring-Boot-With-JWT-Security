@@ -24,7 +24,7 @@ import springfox.documentation.swagger.web.UiConfigurationBuilder;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Configuration

@@ -4,7 +4,7 @@ import com.example.excel.constant.ResponseMessage;
 
 
 /**
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 public class CustomException extends Exception {

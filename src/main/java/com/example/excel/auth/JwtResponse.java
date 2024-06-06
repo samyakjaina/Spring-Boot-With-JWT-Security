@@ -3,7 +3,7 @@ package com.example.excel.auth;
 import java.util.List;
 
 /**
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 public class JwtResponse {

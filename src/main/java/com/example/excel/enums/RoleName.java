@@ -3,7 +3,7 @@ package com.example.excel.enums;
 /**
  * Enum for Role Management
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 public enum RoleName {

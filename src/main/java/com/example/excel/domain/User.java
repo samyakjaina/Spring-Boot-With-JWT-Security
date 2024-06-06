@@ -20,7 +20,7 @@ import javax.validation.constraints.Size;
 /**
  * Entity Class for user
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Entity

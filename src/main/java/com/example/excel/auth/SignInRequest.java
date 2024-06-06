@@ -3,7 +3,7 @@ package com.example.excel.auth;
 import java.io.Serializable;
 
 /**
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 public class SignInRequest implements Serializable {

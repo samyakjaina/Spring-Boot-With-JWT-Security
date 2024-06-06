@@ -13,7 +13,7 @@ import com.example.excel.domain.ExcelFileEntity;
 /**
  * Repository for Excel Entity
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Repository

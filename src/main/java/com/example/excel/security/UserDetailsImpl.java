@@ -13,7 +13,7 @@ import com.example.excel.domain.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 public class UserDetailsImpl implements UserDetails {

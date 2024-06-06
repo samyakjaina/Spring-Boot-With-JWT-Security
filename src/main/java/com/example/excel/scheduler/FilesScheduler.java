@@ -28,6 +28,10 @@ import com.example.excel.domain.ExcelFileEntity;
 import com.example.excel.domain.FileDataEntity;
 import com.example.excel.repository.FileRepository;
 
+/**
+ * @author SAMYAK JAIN
+ *
+ */
 @Configuration
 @EnableScheduling
 public class FilesScheduler {

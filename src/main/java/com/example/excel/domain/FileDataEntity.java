@@ -9,7 +9,7 @@ import javax.persistence.Table;
 /**
  * Entity Class for excel file data
  * 
- * @author MEHUL TRIVEDI
+ * @author SAMYAK JAIN
  *
  */
 @Entity
